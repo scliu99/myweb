@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>响应式布局的实用类</title>
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container">
+  <h1 class="page-header">响应式布局的实用类<small> 使用Bootstrap网格系统布局网页</small></h1>
+  <div class="row">
+    <div class="page-header clearfix">
+      <div class="span4"><img src="images/phone.png" alt="智能手机"></div>
+      <div class="span4 hidden-phone"><img src="images/tablet.png" alt="平板电脑"></div>
+      <div class="span4 visible-desktop"><img src="images/desktop.png" alt="桌面电脑"></div>
+    </div>
+  </div>
+</div>
+<script src="../bootstrap/js/jquery-1.7.2.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

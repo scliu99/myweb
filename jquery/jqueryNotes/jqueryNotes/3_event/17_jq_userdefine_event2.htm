@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            background-color: gray;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#btn').bind('myevent', function (event, parm1, parm2) {          // 自定參數           
+                $('#test').append('<p>使用者自定事件' + parm1 + parm2 + '</p>');
+            }).click(function () {
+                $(this).trigger('myevent', ['參數1', '參數2']);   // 傳參數要以陣列形態傳遞
+            }).trigger('myevent', ['parm1', 'parm2']);          // 傳參數要以陣列形態傳遞
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <div id="test"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+
+            // 將第3個移到最後
+            //var removedLi= $("ul li:eq(2)").remove();
+            //removedLi.appendTo($("ul"));
+
+            // remove方式2
+            //$("ul li").remove("li[title != 2]");
+
+            // empty 清除元表素的內容(節點還在)
+            $("ul li:eq(3)").empty();
+        });
+
+    </script>
+</head>
+<body>
+    <p title="問卷調查">
+        台灣人過的幸福嗎?</p>
+    <ul>
+        <li title="1">1.很不幸福</li>
+        <li title="2">2.不太幸福</li>
+        <li title="3">3.普通</li>
+        <li title="4">4.幸褔</li>
+        <li title="5">5.非常幸福</li>
+    </ul>
+</body>
+</html>

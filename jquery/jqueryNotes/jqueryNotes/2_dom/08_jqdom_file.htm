@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        
+        function addMore() {
+            var div = document.getElementById('moreDiv');
+
+            var br = document.createElement('br');
+            var input = document.createElement('input');
+            var button = document.createElement('input');
+
+            input.setAttribute('type', 'file');
+            button.setAttribute('type', 'button');
+            button.setAttribute('value', 'Remove');
+
+            div.appendChild(br);
+            div.appendChild(input);
+            div.appendChild(button);
+
+            button.onclick = function() {
+                div.removeChild(br);
+                div.removeChild(input);
+                div.removeChild(button);
+            };
+
+        }
+
+
+    </script>
+</head>
+    <body>
+        <input type="file"/><input type="button" value="more..." onclick="addMore();"/>
+        <div id="moreDiv"></div>
+</body>
+</html>

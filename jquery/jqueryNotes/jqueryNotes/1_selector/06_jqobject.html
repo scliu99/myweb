@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var pTag = document.getElementsByTagName('p')[0];
+            // DOM物件轉成jquery物件
+            var pJqTag = $(pTag);
+            alert('DOM物件的結果:' + pTag.innerHTML);
+            alert('jquery物件的結果:' + pJqTag.html());
+
+            // ---------------
+            var clickme = $("#clickme");    // clickme是一組jquery物件(陣列)
+            // 將jquery物件轉成DOM物件,二種方式
+            var domClickme1 = clickme[0];       // 第一種方式
+            var domClickme2 = clickme.get(0);   // 第二種方式           
+            alert('domClick1=' + domClickme1.innerHTML);
+            alert('domClick2=' + domClickme2.innerHTML);
+
+        });
+        
+    </script>
+</head>
+<body>
+    <p id="clickme">
+        點我!</p>
+</body>
+</html>

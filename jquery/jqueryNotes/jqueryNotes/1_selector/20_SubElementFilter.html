@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="13_Style.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 選擇所有class為one的div中第2個子元素,將其背景改為紅色
+            $('#button1').click(function () {
+                $('div.one :nth-child(2)').css('background','red');
+            });
+            
+
+            // 選擇所有class為one的div中第1個子元素,將其背景改為綠色
+            $('#button2').click(function () {
+                $('div.one :first-child').css('background', 'green');
+            });
+            // 選擇所有class為one的div中最後1個子元素,將其背景改為藍色
+            $('#button3').click(function () {
+                $('div.one :last-child').css('background', 'green');
+            });
+            // 選擇所有class為one的div中含有唯1個子元素,將其背景改為黃色
+            $('#button4').click(function () {
+                $('div.one :only-child').css('background', 'yellow');
+            });
+           
+        });
+    </script>
+</head>
+<body>
+    <h3>屬性過濾選擇器</h3>
+    <input type="button" value="選擇所有class為one的div中第2個子元素,將其背景改為紅色" id="button1" /><br />
+    <input type="button" value="選擇所有class為one的div中第1個子元素,將其背景改為綠色" id="button2" /><br />
+    <input type="button" value="選擇所有class為one的div中最後1個子元素,將其背景改為藍色" id="button3" /><br />
+    <input type="button" value="選擇所有class為one的div中含有唯1個子元素,將其背景改為黃色" id="button4" /><br />
+
+
+    <div id="one" class="one">
+        id為one,class為one的div
+            <div class="mini">class為mini</div>
+    </div>
+    <div class="one" id="two" title="test">
+        id為two,class為one,title為test的div.
+        <div class="mini" title="other">class為mini,title為other</div>
+        <div class="mini" title="test">class為mini,title為test</div>
+    </div>
+    <div class="one">
+        <div class="mini">class為mini</div>
+        <div class="mini">class為mini</div>
+        <div class="mini">class為mini</div>
+        <div class="mini"></div>
+    </div>
+    <div class="one">
+        <div class="mini">class為mini</div>
+        <div class="mini">class為mini</div>
+        <div class="mini">class為mini</div>
+        <div class="mini" title="test2">class為mini,tilte為test2</div>
+    </div>
+    <div style="display: none" class="none">style的display為none的div</div>
+    <div class="hide">class為hide的div</div>
+    <div>
+        包含input的type為hidden的div
+        <input type="hidden" size="8" />
+    </div>
+    <span>唯一的span</span>
+
+</body>
+</html>

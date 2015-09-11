@@ -1,0 +1,206 @@
+/* ---------------------------------------------------
+                    顏色指引
+    Gold: rgb(172, 140, 71);
+    White: rgb(226, 226, 226);
+    Grey: rgb(128, 128, 128);
+    Black: rgb(15, 15, 15);
+           rgba(15, 15, 15, 0.74);
+---------------------------------------------------*/
+
+/* ---------------------------------------------------
+                    全域樣式
+---------------------------------------------------*/
+
+body {
+    font-size: 19px;
+    font-family: "cronos-pro", "alegreya", calibri, candara, "segoe UI", Optima, Arial, sans-serif;
+    color: rgb(226, 226, 226);
+    background: rgb(15, 15, 15);
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2% 6% 6% 6%; /* 使container內縮 */
+}
+
+.container {
+    background: rgb(15, 15, 15); /* IE8 */
+    background: rgba(15, 15, 15, 0.74);
+    padding: 30px; /* 使其內容內縮 */
+}
+
+h1,h2,h3{
+    font-family: "double-pica-sc", "alegreya sc", Garamond, "Baskerville Old Face", "Times New Roman", serif;
+    font-weight: normal;
+}
+
+
+h1 {
+    font-size: 3.3684em;
+    line-height: 1.2656em;
+    margin-top: 0.4219em;
+    margin-bottom: 0;
+    color: rgb(172, 140, 71);
+}
+
+h2 {
+    font-size: 2.2632em;
+    line-height: 1.2558em;
+    margin: 0.4219em auto 0.4219em auto;
+}
+
+h3 {
+    font-size: 1.5263em;
+    font-weight: normal;
+    line-height: 1.8621em;
+    margin-top: 0.9310em;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4211em;
+    margin-top: 1.4211em;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%
+}
+
+a:link {
+    color: rgb(172, 140, 71);
+}
+
+a:visited {
+    color: rgb(129, 105, 54);
+}
+
+a:hover {
+    color: rgb(224, 182, 90);
+}
+
+a:active {
+    color: rgb(252, 217, 142);
+}
+
+.featured-info h3 {
+    border-bottom: 1px solid rgb(128, 128, 128);  /* 加入底線 */
+}
+
+.featured-info p {
+    font-style: italic;
+}
+
+.featured-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.button {
+    background: rgb(172, 140, 71);  /* 按鍵底色 */
+    border-radius: 6px; /* 倒角 */
+}
+
+.button a {
+    color: rgb(226, 226, 226);
+    display: block;
+    text-decoration: none;
+    text-align: center;  /* 置中 */
+    font-style: normal;  /* 不用斜體字 */
+    text-transform: uppercase; /* 全大寫 */
+    padding: 10px 0;        /* 增加上下的內間 */
+    
+}
+
+.button a:hover {
+    background: rgb(119, 97, 48);  /* 按鍵底色 */
+    border-radius: 6px; /* 倒角 */
+    
+}
+
+.gallery {
+    margin-top: 30px;
+}
+
+/* ---------------------------------------------------
+                    logo樣式
+---------------------------------------------------*/
+
+.logo {
+    /* 以下三個設定為置中的設法 */
+    display: block; /* 原為inline */
+    margin: 0 auto; /* 左右為auto,會使圖置中 */
+    width: 150px;   /* 但圖也要設為150px */
+}
+
+    .logo img {
+        width: 150px;
+    }
+    
+    
+/* ---------------------------------------------------
+                    nav樣式
+---------------------------------------------------*/
+
+.main-navigation ul {
+    padding-left: 0;
+    
+}
+
+.main-navigation li {
+    list-style: none; /* 移除前面的點 */
+    text-align: center; /* 使文字置中 */
+    margin: 20px 0;
+}
+
+.main-navigation a {
+    display: block;  /* 改為block,使其佔一整行 */
+    padding: 15px 10px;
+    text-decoration: none; /* 移除底線 */
+    text-transform: uppercase; /* 全大寫 */
+    background: rgba(67, 67, 67, 0.17); /* 降底透明度,強化反差 */
+    color: rgb(180, 180, 180);
+}
+
+    .main-navigation a:visited {
+        color: rgb(106, 106, 106);
+    }
+
+    .main-navigation a:hover {
+        color: rgb(255, 255, 255);
+        font-size: 1.05em;
+        transition: .5s font-size, .5s color;   /* 動畫改變,長度2秒, 改變屬性為顏色及字型大小*/
+        background: rgba(60, 60, 60, 0.51);     /* 調深背景顏色,使其看的較清楚 */
+    }
+
+    .main-navigation a:active {
+        color: rgb(172, 140, 71);
+    }
+
+/* ---------------------------------------------------
+                    homepage樣式
+---------------------------------------------------*/
+/* ---------------------------------------------------
+                    menu-page樣式
+---------------------------------------------------*/  
+
+.menu-page .featured-info ul {
+    font-style: italic;
+}
+
+/* ---------------------------------------------------
+                    footer樣式
+---------------------------------------------------*/
+
+footer {
+    padding: 10px 0;
+}
+
+    footer h4 {
+        text-transform: uppercase;
+    }
+
+    footer p {
+        margin: 0;
+        
+    }

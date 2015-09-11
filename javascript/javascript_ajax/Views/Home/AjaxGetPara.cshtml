@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Ajax";
+}
+<script>
+    // 使用ajax的技術,向主機呼叫webapi
+    var ajaxSubmit = function() {
+        var xmlHttpRequest = null; // 宣告一個變數來接受XMLHttpRequest()
+        //alert(window.ActiveXObject);
+        if (window.ActiveXObject) { // IE browser
+            xmlHttpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        } else if (window.XMLHttpRequest) { // 其它的browser
+            xmlHttpRequest = new XMLHttpRequest();
+        }
+        if (xmlHttpRequest != null) {
+            var value1 = document.getElementById("value1").value;
+            var value2 = document.getElementById("value2").value;
+
+
+            // 請求設定
+            xmlHttpRequest.open("GET", "/api/ajax?value1="+value1+"&value2="+value2, false);
+            // ajax的callback function
+            xmlHttpRequest.onreadystatechange = ajaxCallback;
+            // 發出請求(若為POST,則將資料以參數方式傳入)
+            xmlHttpRequest.send(null);
+        }
+        // callback function
+        function ajaxCallback() {
+            // 只需要對readyState為4做處理
+            if (xmlHttpRequest.readyState == 4) {
+                // http協定的回傳結果值,200代表正常結束
+                if (xmlHttpRequest.status == 200) {
+                    var responseText = xmlHttpRequest.responseText;
+                    document.getElementById("output").innerHTML = responseText;
+                }
+            }
+        }
+    };
+    
+</script>
+
+<h2>Ajax</h2>
+<input type="button" value="get string from server" onclick="ajaxSubmit();"/><br/>
+<input type="text" id="value1" name="value1"/><br/>
+<input type="text" id="value2" name="value2"/><br/>
+
+
+<div id="output"></div>

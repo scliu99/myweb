@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .high {
+            font-weight: bold;
+            color: red;
+        }
+        .another {
+            font-style: :italic;
+            color: green;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $("input:eq(0)").click(function() {
+                alert($('p').attr('class'));
+            });
+            $("input:eq(1)").click(function () {
+                $('p').attr('class','high');        // 會覆蓋原有class
+            });
+            $("input:eq(2)").click(function () {
+                $('p').addClass('high');            // 會增加一個屬性內容到class屬性中(但不會重複)
+            });
+            $("input:eq(3)").click(function () {
+                $('p').removeClass('high');         // 會移除一個屬性內容到class屬性中(但不會重複)
+
+            });
+            $("input:eq(4)").click(function () {
+                $('p').removeClass();               // 會移除class中所有內容
+            });
+            $("input:eq(5)").click(function () {
+                $('p').toggleClass('another');      // 會切換(加入/移除交替)class中所有內容
+            });
+            $("input:eq(6)").click(function () {
+                alert($('p').hasClass('another'));  // 會判斷是否有其class內容
+                alert($('p').is('.another'));       // 會判斷是否有其class內容(前後撰擇的元素是否相等)
+            });
+        });
+
+    </script>
+</head>
+    <body>
+        
+        <input type="button" value="button1"/>
+        <input type="button" value="button2"/>
+        <input type="button" value="button3"/>
+        <input type="button" value="button4"/>
+        <input type="button" value="button5"/>
+        <input type="button" value="button6"/>
+        <input type="button" value="button7"/>
+        
+        <p title="問卷調查" class="none">
+            台灣人過的幸福嗎?</p>
+        <ul>
+            <li title="1">1.很不幸福</li>
+            <li title="2">2.不太幸福</li>
+            <li title="3">3.普通</li>
+            <li title="4">4.幸褔</li>
+            <li title="5">5.非常幸福</li>
+        </ul>
+    </body>
+</html>

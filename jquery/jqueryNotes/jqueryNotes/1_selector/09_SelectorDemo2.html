@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.js"></script>
+    <script>
+//        window.onload=function() {
+//            var myTable = document.getElementById('table1');
+//            var myTbody = myTable.getElementsByTagName('tbody')[0];
+//            var myTr = myTbody.getElementsByTagName('tr');
+//            for (var i = 0; i < myTr.length; i++) {
+//                if (i % 2 == 0) {
+//                    myTr[i].style.backgroundColor = 'red';      // css: background-color, dom: backgroundColor
+//                } else {
+//                    myTr[i].style.backgroundColor = 'blue';
+//                }
+//            }
+//        }
+        $(document).ready(function () {
+            $("#table1 tr:even").css("background-color", "red");
+            $("#table1 tr:odd").css("background-color", "blue");
+        });
+        
+
+    </script>
+</head>
+    <body>
+        <table id="table1" border="1" align="center" width="80%">
+            <tbody>
+                <tr><td>Hello</td><td>Hello</td><td>Hello</td><td>Hello</td></tr>
+                <tr><td>World</td><td>World</td><td>World</td><td>World</td></tr>
+                <tr><td>Welcome</td><td>Welcome</td><td>Welcome</td><td>Welcome</td></tr>
+                <tr><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td></tr>
+                <tr><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td></tr>
+                <tr><td>ccccc</td><td>ccccc</td><td>ccccc</td><td>ccccc</td></tr>
+                <tr><td>ddddd</td><td>ddddd</td><td>ddddd</td><td>ddddd</td></tr>
+                <tr><td>eeeee</td><td>eeeee</td><td>eeeee</td><td>eeeee</td></tr>
+            </tbody>
+        </table>
+        
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .high {
+            font-weight: bold;
+            color: red;
+        }
+        .another {
+            font-style: :italic;
+            color: green;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            var $body = $('body').children();
+            var $p = $('p').children();
+            var $ul = $('ul').children();
+
+            alert($body.length);
+            alert($p.length);
+            alert($ul.length);
+
+
+            for (var i = 0; i < $ul.length; i++) {
+                alert($ul[i].innerHTML);
+            }
+
+            // 利用jQuery提供的方法做偏歷
+            $.map($ul, function(item) {
+                alert(item.innerHTML);
+            });
+        });
+
+    </script>
+</head>
+    <body>
+         <p title="問卷調查" class="none">
+            台灣人過的幸福嗎?</p>
+        <ul>
+            <li title="1">1.很不幸福</li>
+            <li title="2">2.不太幸福</li>
+            <li title="3">3.普通</li>
+            <li title="4">4.幸褔</li>
+            <li title="5">5.非常幸福</li>
+        </ul>
+    </body>
+</html>
