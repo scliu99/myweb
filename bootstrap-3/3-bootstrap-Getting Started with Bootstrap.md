@@ -13,4 +13,4 @@
 
 ## Bootstrap的格子系統
 
-![格子系統](bootstrap-1.jpg "格子系統")
+![格子系統](images/bootstrap-1.jpg "格子系統")
