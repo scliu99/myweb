@@ -4,7 +4,42 @@
 
 ---
 
-####不同型別之間的轉換
+### 流程控制: 判別式
+
+#### 判別式格式1: 當`condition`值為`true`時,會執行大刮號裡的程式碼
+
+```javascript
+if(condition) {
+    // do something if condition is true
+}
+```
+
+#### 判別式格式2: 當`condition`值為`true`時,會執行大刮號裡的程式,否則執行`else`之後大刮裡的程式碼
+
+```javascript
+if(condition) {
+    // do something if condition is true
+} else {
+    // do something if condition is false
+}
+```
+
+#### 範例:
+
+```javascript
+var age = 10;
+var name = "David";
+
+if(age == 10) {
+    alert('age is 10');
+}
+
+if(age < 10 || name == "David"){
+    alert("I'm David");
+}
+```
+
+###不同型別之間的轉換
 
 不同型別的變數若要一起做運算,則會自動作一些轉換
 
@@ -21,7 +56,7 @@ console.log(b+c); // 布林值與字串,布林值會變"true"或"false"字串
 
 ```javascript
 var a = 10;
-var b= '10.0';
+var b = '10.0';
 console.log(a == b); // true; 當字串與數值比較時,會先試著將字串轉成數值再做比對
 
 var c = true;
