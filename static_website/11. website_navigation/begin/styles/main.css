@@ -11,6 +11,9 @@
                     全域樣式
 ---------------------------------------------------*/
 
+
+
+
 body {
     font-size: 19px;
     font-family: "cronos-pro", "alegreya", calibri, candara, "segoe UI", Optima, Arial, sans-serif;
@@ -80,6 +83,44 @@ a:hover {
 a:active {
     color: rgb(252, 217, 142);
 }
+
+
+
+
+.main-navi li {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-navi ul {
+    padding-left:0;
+}
+
+.main-navi a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    background: rgba(67,67,67, 0.37);
+    color: rgb(180,180,180);
+}
+
+.main-navi a:visited {
+    color: rgb(106, 106, 106);
+}
+
+.main-navi a:hover {
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
+    background: rgba(60,60,60, 0.8);
+    transition: 1s font-size, 1s color;
+}
+
+.main-navi a:active {
+    color: rgb(252, 217, 142);
+}
+
 
 /* ---------------------------------------------------
                     logo樣式

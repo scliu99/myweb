@@ -127,15 +127,60 @@ a:active {
 
     .main-navigation a:hover {
         color: rgb(255, 255, 255);
-        font-size: 1.05em;
-        transition: .5s font-size, .5s color;   /* 動畫改變,長度2秒, 改變屬性為顏色及字型大小*/
+        font-size: 1.25em;
+        transition: 1s font-size, 1s color;   /* 動畫改變,長度2秒, 改變屬性為顏色及字型大小*/
         background: rgba(60, 60, 60, 0.51);     /* 調深背景顏色,使其看的較清楚 */
     }
 
     .main-navigation a:active {
         color: rgb(172, 140, 71);
     }
+
+h1,h2,h3{
+    font-family: "double-pica-sc", "alegreya sc", Garamond, "Baskerville Old Face", "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.3684em;
+    line-height: 1.2656em;
+    margin-top: 0.4219em;
+    margin-bottom: 0;
+    color: rgb(172, 140, 71);
+}
+
+.featured-info h3 {
+    border-bottom: 1px solid rgb(128, 128, 128); 
     
+}
+.div-location p {
+    font-style: italic;
+}
+.featured-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+.button {
+    background: rgb(172, 140, 71);  /* 按鍵底色 */
+    border-radius: 6px; /* 倒角 */
+}
+
+.button a {
+    color: rgb(226, 226, 226);
+    display: block;
+    text-decoration: none;
+    text-align: center;  /* 置中 */
+    font-style: normal;  /* 不用斜體字 */
+    text-transform: uppercase; /* 全大寫 */
+    padding: 10px 0;        /* 增加上下的內間 */
+    
+}
+
+.button a:hover {
+    background: rgb(119, 97, 48);  /* 按鍵底色 */
+    border-radius: 6px; /* 倒角 */
+    
+}
 /* ---------------------------------------------------
                     footer樣式
 ---------------------------------------------------*/
