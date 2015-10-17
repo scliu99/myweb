@@ -153,13 +153,16 @@ h1 {
     border-bottom: 1px solid rgb(128, 128, 128); 
     
 }
+
 .div-location p {
     font-style: italic;
 }
+
 .featured-info ul {
     list-style: none;
     padding-left: 0;
 }
+
 .button {
     background: rgb(172, 140, 71);  /* 按鍵底色 */
     border-radius: 6px; /* 倒角 */
