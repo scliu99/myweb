@@ -29,9 +29,8 @@
 
    ```javascript
    var myfunc = function() { ... };
-   var b = document.getElementById('mypage'); // 取得body元素
-   b.addEventListener("load", myfunc); // 加入指定事件
-   b.removeEventListener("load", myfunc); // 移除指定事件
+   window.addEventListener("load", myfunc); // 加入指定事件
+   window.removeEventListener("load", myfunc); // 移除指定事件
    ```
 
 ###對於事件用法的一些注意事項

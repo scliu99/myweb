@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>一個HTML範例</title>
+    <!-- 注意放這裡的問題! -->
+    <!-- <script src="javascript11.js"></script>-->
+    <style>
+        .button {
+            border: 1px solid red;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            padding: 10px 10px;
+            background: grey;
+            color: yellow;
+            display: inline-block;
+            font-size: 1em;
+        }
+        .outter {
+            border: 1px solid blue;
+            width: 320px;
+            margin: 0px auto;
+            background: #eeeeee;
+        }
+        .outter .inner{
+            border: 1px solid red;
+            width: 180px;
+            margin: 24px auto;
+            padding: 10px;
+            background: #888888;
+        }
+    </style>
+  </head>
+<body id='mypage' onload="init();">
+  歡迎訪問臉書網站!
+  <br>
+  <a href="http://www.facebook.com" name="fburl">http://www.facebook.com</a>
+    <br/>
+    <div id='button1' class='button'>
+        click me!
+    </div>
+    <button id='button2' class='button'>
+        click me 2!
+    </button>
+    <button id='button3'>
+        click me 3!
+    </button>
+
+    <div id='outter' class='outter'>
+        Outter
+        <div id='inner1' class='inner'>
+            Inner1
+        </div>
+        <div id='inner2' class='inner'>
+            Inner2
+        </div>
+
+    </div>
+
+  <script src="javascript11.js"></script>
+</body>
+</html>
