@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            <!--font-size: 13px;
+            line-height: 130%;-->
+            padding: 60px;
+        }
+        #panel
+        {
+            
+            left: 600px;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #0050d0;
+            background: #96e555;
+            cursor: pointer;
+        }
+        
+    </style>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#panel').click(function () {
+                // 參數1:對left屬性進行改變,由預設位置移動到500px的位置(絕對量)
+                // 參數2:經歷時間
+                // 參數3:完成後的callback函式
+                /*
+                $(this).animate({ left: "500px" }, 3000, function () {
+                    alert(3);
+                });
+                */
+                // +=為增量,直到left增加了500px為止(相對量)
+                // -=為減量
+                /*
+                $(this).animate({ left: "-=500px" }, 3000);
+                  */
+
+                // 參數1可以同時指定多個屬性
+                /*
+                $(this).animate({ left: "-=200px", height: "+=100px" }, 1000);
+                */
+                // 多次動畫,會分多次進行
+                
+                $(this).animate({ left: "-=200px" }, 1000)
+                    .animate({ height: "+=100px" }, 1000);
+                
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+    </div>
+</body>
+</html>

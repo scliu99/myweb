@@ -74,7 +74,7 @@ document
 
 ```javascript
 var mybody = document.getElementById('mybody'); // 取得<body>的DOM物件
-var myhrefs = document.getElementsByName('mybody'); // 取得<a>的DOM物件
+var myhrefs = document.getElementsByName('a'); // 取得<a>的DOM物件
 console.dir(mybody);
 console.dir(myhrefs);
 ```

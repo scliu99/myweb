@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        function addItems() {
+            //            document.getElementById('result').innerHTML = '';
+            //            var value = parseInt(document.getElementById('itemsNumber').value);
+            //            
+            //            for (var i = 0; i < value; i++) {
+            //                var input = document.createElement('input');
+            //                input.setAttribute('type', 'text');
+            //                var br = document.createElement('br');
+            //                document.getElementById('result').appendChild(input);
+            //                document.getElementById('result').appendChild(br);
+            //            }
+
+            $('#result').html('');
+            var itemsNumber = parseInt($("#itemsNumber").val());
+            var item = "";
+            /* 這種寫法會連續操作DOM,效率差
+            for (var i = 0; i < itemsNumber; i++) {
+                $('#result').append('<input type="text"><br>');
+            }
+            */
+            // 對DOM的操作僅一次,推薦!
+            for (var i = 0; i < itemsNumber; i++) {
+                item += '<input type="text"><br>';
+            }
+            $('#result').append(item);
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="itemsNumber" />
+    <input type="button" id="btn" onclick="addItems();" value="click" />
+    <div id="result">
+    </div>
+</body>
+</html>
