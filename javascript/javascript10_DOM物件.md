@@ -104,7 +104,7 @@ console.log(mybody.nodeName); // BODY
 - `className`: 節點中的class屬性值,以字串型態表示
 - `classList`: 節點中的class屬性值,以陣列型態表示
 - `style`: 節點中的style屬性,這裡可以設定所有`css`的屬性及值
-- `attributes`: 節點中的所有屬性及值,以陣列型態表示
+- `attributes`: 節點中的所有屬性及值,以陣列型態表示(setAttribute, getAttribute)
 - `onxxxxx`: 所有的事件(參考事件的章節)
 
 ####DOM常用的方法
@@ -154,10 +154,3 @@ console.log(mybody.nodeName); // BODY
 
 ---
 關於節點的相關操作還有很多,可以參考[http://www.w3schools.com/jsref/](http://www.w3schools.com/jsref/),獲得更多的資訊!
-   
-   
-   
-   
-   
-   
-   
