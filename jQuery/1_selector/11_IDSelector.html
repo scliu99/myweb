@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert($('#test1').length);  // id 必須是唯一,就算DOM裡出現1個以上相同ID的元素,亦只會選到一個
+            alert($('#test1').html());    // innerHtml
+            alert($('#test1').text());    // innerText
+        });
+    </script>
+</head>
+    <body>
+        <a id="test1" href="http://www.google.com"><b>google</b></a>
+        <a id="test1" href="http://www.yahoo.com">yahoo</a>
+        <a id="test2" href="http://www.yahoo.com">yahoo2</a>
+
+    </body>
+</html>

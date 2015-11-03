@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            <!--font-size: 13px;
+            line-height: 130%;-->
+            padding: 60px;
+        }
+        #panel
+        {
+            
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #0050d0;
+            background: #96e555;
+            cursor: pointer;
+        }
+        
+    </style>
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+
+            $('#panel').css('opacity', '0.1');       // 設定透明度
+            // 動畫組合
+            /*
+            $('#panel').click(function () {
+                $(this).animate({ left: "400px", height: "200px", opacity: '1' }, 3000)
+                    .animate({ top: "200px", width: "200px" }, 3000)
+                    .css('border', '5px solid blue');        // css的設定並非動畫,會在一開始
+                                                             // 就設定
+            });
+            */
+            // 使用callback達成動畫完成後才改變css
+            $('#panel').click(function () {
+                $(this).animate({ left: "400px", height: "200px", opacity: '1' }, 3000)
+                    .animate({ top: "200px", width: "200px" }, 3000, function() {
+                        //$(this).css('border', '5px solid blue'); // css的設定改為callback
+                                                                 // 注意:$(this)的使用!
+                    }).css('border', '5px solid blue');
+
+                // 就設定
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+    </div>
+</body>
+</html>
